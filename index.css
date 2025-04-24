@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+    font-weight: 400;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: #fff;
+    width: 100rem;
+    max-width: 100%;
+    margin: auto;
+    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -.1rem 0rem 0.1rem #c4c4c4;
+}
+
+.text-justify {
+    text-align: justify;
+}
+/* header starts here  */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: #fff;
+    padding: 2rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    min-height: 5vh;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.figure-logo { 
+    font-size: 3rem;
+    border: 1px solid white;
+}
+
+.nav-link {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.8rem;
+}
+
+nav ul li {
+    padding: 1rem;
+    transition: all 0.4s;
+}
+
+nav ul li:hover{
+    background-color: burlywood;
+    border-radius: 0.6rem;
+}
+/* header ends here  */
+
+/* banner section starts here  */
+.banner {
+    display: flex;
+    padding: 5rem 1rem;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.banner article {
+    flex-basis: 50%;
+    margin: 1rem;
+}
+
+.banner aside {
+    flex-basis: 50%;
+    text-align: center;
+}
+.banner__heading {
+    font-size: large;
+    display: inline-block;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.banner__description {
+    font-size: 1.8rem;
+}
+
+.banner__img {
+    height: 40rem;
+    width: 40rem;
+    border-radius: 50px;
+    border: 2px solid black;
+}
+/* banner section ends here  */
+
+/* responsiveness starts here  */
+@media screen and (max-width: 992px) {
+    
+}
+@media screen and (max-width: 768px) {
+   html {
+    font-size: 55.5%;
+   } 
+
+   .banner article {
+    margin-right: 2rem;
+   }
+}
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 48.5%;
+       } 
+    header {
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        padding-left: 2.5rem;
+    }
+
+    .banner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .banner article {
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+    .banner__img {
+        max-width: 100%;
+    }
+}
+/* responsiveness ends here  */
