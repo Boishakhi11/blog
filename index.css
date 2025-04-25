@@ -25,6 +25,41 @@ body {
 .text-justify {
     text-align: justify;
 }
+
+.text-white {
+    color: white;
+}
+
+.btn {
+    background-color: rgb(220, 147, 95);
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.6rem;
+    padding: 1rem 1rem;
+    letter-spacing: 0.1rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem black;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    font-size: 5rem;
+    font-family: "italiano", cursive;
+    text-align: center;
+}
+
+.section-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    min-height: 95vh;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 /* header starts here  */
 header{
     display: flex;
@@ -72,7 +107,7 @@ nav ul li:hover{
     padding: 5rem 1rem;
     align-items: center;
     justify-content: center;
-    min-height: 70vh;
+    min-height: 90vh;
 }
 
 .banner article {
@@ -105,6 +140,84 @@ nav ul li:hover{
 }
 /* banner section ends here  */
 
+/* about me section starts here  */
+#blog-about {
+    background-color: grey;
+}
+
+.cards {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    border-radius: 0.5rem;
+    background-color: #a09d9d;
+    padding: 3rem 1rem;
+    margin: 1.5rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card__heading {
+    font-size: 3rem;
+}
+
+.card__description {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.card__btn{
+   width: 60%; 
+}
+
+.card__btn:hover {
+    cursor: pointer;
+}
+/* about me section ends here  */
+
+/* archeievs section starts here  */
+
+.archeives-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 0.1rem solid black;
+    border-top: 0.1rem solid black;
+}
+
+.archeives__img {
+    height: 20rem;
+    width: 20rem;
+    border-radius: 0.6rem;
+    transition: all 0.3s;
+}
+
+.archeives__img:hover {
+    transform: scale(1.1);
+}
+
+.archeives__lists{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.archeives__list{
+
+}
+
+/* archeives section ends here  */
 /* responsiveness starts here  */
 @media screen and (max-width: 992px) {
     
@@ -116,6 +229,14 @@ nav ul li:hover{
 
    .banner article {
     margin-right: 2rem;
+   }
+
+   #blog-about {
+    min-height: auto;
+   }
+
+   #archeives {
+    min-height: auto;
    }
 }
 @media screen and (max-width: 600px) {
@@ -140,9 +261,29 @@ nav ul li:hover{
         flex-direction: column;
         align-items: center;
         margin-bottom: 5rem;
+        
+    }
+
+    .banner__description {
+        padding-right: 1rem;
     }
     .banner__img {
         max-width: 100%;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .archeives__lists {
+        flex-wrap: wrap;
+        flex-direction: column;
     }
 }
 /* responsiveness ends here  */
