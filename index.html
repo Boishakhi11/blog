@@ -21,12 +21,16 @@
             <figure class="figure-logo">
                 <i class="fa-brands fa-autoprefixer logo"></i>
             </figure>
-            <nav id="menu-icon">
+
+            <i class="fas fa-bars fa-4x" id="navbar"></i>
+
+            <nav id="menu-icon" class="hidden">
                 <ul>
                     <li><a href="#" class= "nav-link">Home</a></li>
-                    <li><a href="#" class= "nav-link">About</a></li>
-                    <li><a href="#" class= "nav-link">Contact</a></li>
-                    <li><a href="#" class= "nav-link">Blog</a></li>
+                    <li><a href="#blog-about" class= "nav-link">About</a></li>
+                    <li><a href="#archeives" class= "nav-link">Contact</a></li>
+                    <li><a href="#blog-posts" class= "nav-link">Blog</a></li>
+                    <li><a href="#contact-section" class= "nav-link">Contact</a></li>
                 </ul>
             </nav>
          </header>
@@ -86,7 +90,7 @@
             <!-- blog-post section starts here  -->
              <section id="blog-posts" class="section-center">
                 <h2 class="section-heading"> Blog Posts</h2>
-                <div class="blog-posts">
+                <div class="blog-posts section-center">
                     <div class="blog-post">
                         <aside class="blog-post__aside">
                             <img src="./images/post.jpg" alt="laptop" class="img">
@@ -98,44 +102,76 @@
                             </p>
                             <button class="btn blog-post__button"> Learn More</button>
                         </article>
-                </div>
+                    </div>
 
                     <div class="blog-post">
                         <aside class="blog-post__aside">
                             <img src="./images/post.jpg" alt="laptop" class="img">
                         </aside>
                             <article class="blog-post__description">
-                                <h3 class="blog-post__heading"> Blog 1</h3>
+                                <h3 class="blog-post__heading"> Blog 2</h3>
                                 <h4 class="blog-post__subheading">Sub Heading</h4>
                                 <p class="blog-post__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo amet sequi recusandae nulla minus ex atque accusantium.    
                                 </p>
                                 <button class="btn blog-post__button"> Learn More</button>
                             </article>
                     </div>
-
-                        
-                        <div class="blog-post">
-                            <aside class="blog-post__aside">
-                                <img src="./images/post.jpg" alt="laptop" class="img">
-                            </aside>
-                            <article class="blog-post__description">
-                                <h3 class="blog-post__heading"> Blog 1</h3>
-                                <h4 class="blog-post__subheading">Sub Heading</h4>
-                                <p class="blog-post__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo amet sequi recusandae nulla minus ex atque accusantium.    
-                                </p>
-                                <button class="btn blog-post__button"> Learn More</button>
-                            </article>
-                            </div>    
-                    ß
+                    <div class="blog-post">
+                        <aside class="blog-post__aside">
+                            <img src="./images/post.jpg" alt="laptop" class="img">
+                        </aside>
+                        <article class="blog-post__description">
+                            <h3 class="blog-post__heading"> Blog 3</h3>
+                            <h4 class="blog-post__subheading">Sub Heading</h4>
+                            <p class="blog-post__details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quo amet sequi recusandae nulla minus ex atque accusantium.    
+                            </p>
+                            <button class="btn blog-post__button"> Learn More</button>
+                        </article>
+                    </div>    
+                    
                 </div>
              </section>
              <!-- blog post section ends here  -->
 
+             <!-- contact section starts here  -->
+              <section id="contact-section" class="section-center">
+                <h2 class="section-heading text-white "> Contact Me</h2>
+                <div>
+                    <form id="contact-form">
+                        <div class="form-control">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" autocomplete="on" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" autocapitalize="on" required>
+                        </div>
+                        <div class="form-control">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message"> </textarea>
+                        </div>
+                        <div class="form-control form-btn-field">
+                            <button class="btn contact__btn">Submit</button>
+                        </div>
+                    </form>
+                </div>
+              </section>
+              <!-- contact section ends here  -->
+
          </main>
          <!-- footer starts here -->
          <footer>
-
+            <p class="copyright-text">Copyright &copy; by Boishakhi Ghosh. All rights reserved</p>
+            <nav class="footer__nav">
+                <a href= "#blog-banner" class="footer__link"> <i class="fa fa-home footer__icon"></i></a>
+                <a href="https://www.facebook.com" target="_blank" class="footer__link"> <i class="fab fa-facebook footer__icon"></i></a>
+                <a href="https://www.linkedin.com/in/boishakhimukta/" target="_blank" class="footer__link"> <i class="fab fa-linkedin footer__icon"></i></a>
+                <a href="https://x.com/" target="_blank" class="footer__link"> <i class="fab fa-twitter footer__icon"></i></a>
+                <a href="https://www.youtube.com/" target="_blank" class="footer__link"> <i class="fab fa-youtube footer__icon"></i></a>
+                
+            </nav>
          </footer>
          <!-- footer ends here  -->
-    </body>
+        <script src="/index.js"></script>
+    </body> 
 </html>

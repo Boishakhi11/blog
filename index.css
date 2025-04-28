@@ -8,6 +8,10 @@
     font-weight: 400;
 }
 
+:root {
+    --box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -.1rem 0rem 0.1rem #c4c4c4;
+}
+
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
@@ -19,7 +23,7 @@ body {
     width: 100rem;
     max-width: 100%;
     margin: auto;
-    box-shadow: 0.1rem 0.1rem 0.1rem #c4c4c4, -.1rem 0rem 0.1rem #c4c4c4;
+    box-shadow: var(--box-shadow);
 }
 
 .text-justify {
@@ -73,6 +77,9 @@ header{
     z-index: 10;
     min-height: 5vh;
 }
+#navbar {
+    display: none;
+}
 
 nav ul {
     display: flex;
@@ -83,6 +90,7 @@ nav ul {
     font-size: 3rem;
     border: 1px solid white;
 }
+
 
 .nav-link {
     color: #fff;
@@ -107,7 +115,7 @@ nav ul li:hover{
     padding: 5rem 1rem;
     align-items: center;
     justify-content: center;
-    min-height: 90vh;
+    min-height: 95vh;
 }
 
 .banner article {
@@ -213,11 +221,131 @@ nav ul li:hover{
     justify-content: center;
     gap: 2rem;
 }
-.archeives__list{
+
+/* archeives section ends here  */
+
+/* blog-post section starts here  */
+.blog-posts {
+    gap: 2rem;
+}
+.blog-post {
+    width: 70%;
+    display: flex;
+    gap: 2rem;
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow);
+    transition: all 0.4s;
+}
+
+.blog-post:hover {
+    transform: scale(1.1);
+}
+.blog-post__aside {
+    flex: 1;
+}
+
+.blog-post__description {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.blog-post__button {
+    width: 30%;
+    margin-bottom: 1rem;
 
 }
 
-/* archeives section ends here  */
+.blog-post__heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post__subheading {
+    font-size: 2rem;
+}
+
+.blog-post__details {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+/* blog-post section ends here  */
+
+/* Contact me section starts here  */
+#contact-section {
+    background-color: #4c4c4c;
+    max-height: 95vh;
+}
+#contact-form {
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+  }
+
+.form-control {
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-control label {
+    flex: 0.3;
+    font-size: 1.6rem;
+}
+
+.form-control > input, textarea {
+    flex: 0.7;
+    width: 40rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.6rem;
+}
+
+textarea {
+    resize: none;
+    height: 10vh;
+}
+
+.form-btn-field {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact__btn {
+    width: 30%;
+}
+/* Contact me section ends here  */
+
+/* footer section starts here  */
+footer {
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 2rem;
+    min-height: 5vh;
+    font-size: 1.2rem;
+}
+
+.footer__nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer__icon {
+    
+}
+
+.footer__link {
+    color: #fff;
+    font-size: 2rem;
+}
+/* footer section ends here  */
 /* responsiveness starts here  */
 @media screen and (max-width: 992px) {
     
@@ -238,7 +366,18 @@ nav ul li:hover{
    #archeives {
     min-height: auto;
    }
+   .blog-post {
+    width: 80%;
+    flex-direction: column;
+    padding: 0 1rem;
+   }
+   #contact-section {
+    min-height: auto;
+   }
 }
+
+
+
 @media screen and (max-width: 600px) {
     html {
         font-size: 48.5%;
@@ -246,6 +385,17 @@ nav ul li:hover{
     header {
         flex-direction: column;
     }
+
+    #navbar {
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+    
     nav ul {
         flex-direction: column;
         padding-left: 2.5rem;
@@ -284,6 +434,14 @@ nav ul li:hover{
     .archeives__lists {
         flex-wrap: wrap;
         flex-direction: column;
+    }
+    .blog-post {
+        width: 90%;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 }
 /* responsiveness ends here  */
